@@ -84,6 +84,7 @@ view()->share('allCaseStudies', config('case_studies_data'));
 
 $app->middleware([
     \Illuminate\Session\Middleware\StartSession::class,
+    App\Http\Middleware\TraceMiddleware::class,
     App\Http\Middleware\SecurityHeadersMiddleware::class,
 ]);
 

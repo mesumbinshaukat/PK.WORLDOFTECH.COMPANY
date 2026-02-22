@@ -15,10 +15,18 @@ class AdminAuthMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (!app('session')->get('admin_logged_in')) {
+        \Illuminate\Support\Facades\Log::info('Admin middleware check', [
+            'path' => $request->path(),
+            'admin_logged_in' => $request->session()->get('admin_logged_in'),
+            'session_id' => $request->session()->getId()
+        ]);
+
+        if (!$request->session()->get('admin_logged_in')) {
+            \Illuminate\Support\Facades\Log::warning('Admin NOT logged in, redirecting to login');
             return redirect('/admin/login');
         }
 
+        \Illuminate\Support\Facades\Log::info('Admin IS logged in, proceeding');
         return $next($request);
     }
 }
