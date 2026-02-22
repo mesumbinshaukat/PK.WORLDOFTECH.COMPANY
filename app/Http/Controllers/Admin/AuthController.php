@@ -24,12 +24,13 @@ class AuthController extends Controller
         if ($admin && \Illuminate\Support\Facades\Hash::check($request->password, $admin->password)) {
             session(['admin_logged_in' => true, 'admin_id' => $admin->id]);
             
-            $admin->update(['last_login' => now()]);
+            $admin->update(['last_login' => \Illuminate\Support\Carbon::now()]);
             
             return redirect('/admin');
         }
 
-        return redirect($request->header('referer', '/'))->with('error', 'Invalid credentials.');
+        session()->flash('error', 'Invalid credentials.');
+        return redirect($request->header('referer', '/'));
     }
 
     public function logout()
