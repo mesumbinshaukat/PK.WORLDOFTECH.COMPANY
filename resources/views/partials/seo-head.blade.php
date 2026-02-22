@@ -8,13 +8,13 @@
     <meta property="og:description" content="@yield('meta_description', 'World of Tech Pakistan is a leading SaaS and IT-based company.')">
     <meta property="og:url" content="{{ url(Illuminate\Support\Facades\Request::path()) }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ url('images/logo.png') }}">
+    <meta property="og:image" content="{{ url('images/preview.jpg') }}">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('title', 'World of Tech Pakistan')">
     <meta name="twitter:description" content="@yield('meta_description', 'World of Tech Pakistan is a leading SaaS and IT-based company.')">
-    <meta name="twitter:image" content="{{ url('images/logo.png') }}">
+    <meta name="twitter:image" content="{{ url('images/preview.jpg') }}">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
