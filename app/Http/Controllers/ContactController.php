@@ -18,6 +18,6 @@ class ContactController extends Controller
 
         Log::info('New Contact Request', $request->all());
 
-        return redirect()->back()->with('success', 'Thank you for your message! Our team will get back to you shortly.');
+        return redirect($request->header('referer', '/'))->with('success', 'Thank you for your message! Our team will get back to you shortly.');
     }
 }

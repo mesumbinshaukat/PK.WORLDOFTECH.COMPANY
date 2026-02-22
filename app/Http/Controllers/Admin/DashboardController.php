@@ -26,10 +26,10 @@ class DashboardController extends Controller
             $image = $request->file('image');
             $name = $request->partner_name . '.webp'; // Normalizing to webp
             $image->move(base_path('public/images/partners'), $name);
-            return redirect()->back()->with('success', 'Image updated successfully.');
+            return redirect($request->header('referer', '/dashboard'))->with('success', 'Image updated successfully.');
         }
 
-        return redirect()->back()->with('error', 'Upload failed.');
+        return redirect($request->header('referer', '/dashboard'))->with('error', 'Upload failed.');
     }
 
     public function deleteContact($id)
@@ -37,9 +37,9 @@ class DashboardController extends Controller
         $contact = \App\Models\Contact::find($id);
         if ($contact) {
             $contact->delete();
-            return redirect()->back()->with('success', 'Contact inquiry deleted successfully.');
+            return redirect($request->header('referer', '/dashboard'))->with('success', 'Contact inquiry deleted successfully.');
         }
-        return redirect()->back()->with('error', 'Contact not found.');
+        return redirect($request->header('referer', '/dashboard'))->with('error', 'Contact not found.');
     }
 
     public function contacts()
