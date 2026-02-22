@@ -39,3 +39,24 @@ if (!function_exists('config_path')) {
         return app()->basePath('config' . ($path ? DIRECTORY_SEPARATOR . $path : $path));
     }
 }
+if (!function_exists('session')) {
+    /**
+     * Get / set the specified session value.
+     *
+     * @param  array|string|null  $key
+     * @param  mixed  $default
+     * @return mixed|\Illuminate\Session\Store|\Illuminate\Session\SessionManager
+     */
+    function session($key = null, $default = null)
+    {
+        if (is_null($key)) {
+            return app('session');
+        }
+
+        if (is_array($key)) {
+            return app('session')->put($key);
+        }
+
+        return app('session')->get($key, $default);
+    }
+}
