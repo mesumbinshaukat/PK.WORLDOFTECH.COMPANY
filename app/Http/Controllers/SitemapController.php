@@ -13,12 +13,19 @@ class SitemapController extends Controller
             '/projects',
             '/about',
             '/services',
+            '/case-studies',
             '/contact',
             '/privacy',
             '/terms',
             '/cookies',
             '/disclaimer'
         ];
+
+        // Add dynamic service pages
+        $services = config('services_data');
+        foreach ($services as $service) {
+            $urls[] = '/services/' . $service['slug'];
+        }
 
         $xml = '<?xml version="1.0" encoding="UTF-8"?>';
         $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
@@ -27,8 +34,8 @@ class SitemapController extends Controller
             $xml .= '<url>';
             $xml .= '<loc>' . url($url) . '</loc>';
             $xml .= '<lastmod>' . date('Y-m-d') . '</lastmod>';
-            $xml .= '<changefreq>weekly</changefreq>';
-            $xml .= '<priority>' . ($url === '/' ? '1.0' : '0.8') . '</priority>';
+            $xml .= '<changefreq>' . ($url === '/' ? 'daily' : 'weekly') . '</changefreq>';
+            $xml .= '<priority>' . ($url === '/' ? '1.0' : ($url === '/projects' || $url === '/services' ? '0.9' : '0.8')) . '</priority>';
             $xml .= '</url>';
         }
 
