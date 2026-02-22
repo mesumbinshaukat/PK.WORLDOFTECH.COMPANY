@@ -47,6 +47,7 @@
                     <a href="/services" class="block text-neon-blue font-bold text-sm pt-2">View All Services</a>
                 </div>
             </div>
+            <a href="/case-studies" class="text-lg text-gray-300 hover:text-neon-blue transition-colors">Case Studies</a>
             <a href="/contact" class="text-lg text-gray-300 hover:text-neon-blue transition-colors">Contact</a>
         </nav>
 

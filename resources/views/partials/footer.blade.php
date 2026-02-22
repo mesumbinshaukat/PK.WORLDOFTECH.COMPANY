@@ -3,8 +3,8 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <!-- Brand Column -->
             <div class="col-span-1 md:col-span-1">
-                <a href="/" class="text-xl font-bold text-white mb-6 block">
-                    WORLD OF TECH <span class="text-neon-blue">PK</span>
+                <a href="/" class="mb-6 block group">
+                    <img src="{{ url('images/logo.png') }}" alt="World of Tech PK" class="h-16 w-auto group-hover:scale-105 transition-transform duration-300">
                 </a>
                 <p class="text-gray-400 leading-relaxed mb-6">
                     Empowering Pakistan's digital future through cutting-edge SaaS solutions and premium IT services.
@@ -56,13 +56,7 @@
             <p class="text-gray-500 text-sm mb-4 md:mb-0">
                 &copy; {{ date('Y') }} World of Tech Pakistan. All rights reserved.
             </p>
-            <div class="flex items-center space-x-2 text-xs text-gray-600">
-                <span>Optimized for AI</span>
-                <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
-                <span>Dark Mode Only</span>
-                <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
-                <span>Secure Infrastructure</span>
-            </div>
+            
         </div>
     </div>
 </footer>
