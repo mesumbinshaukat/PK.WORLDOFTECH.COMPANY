@@ -20,6 +20,7 @@
         <!-- Tabs -->
         <div class="flex items-center space-x-6 border-b border-gray-800 mb-10">
             <button @click="activeTab = 'contacts'" :class="activeTab === 'contacts' ? 'text-neon-blue border-b-2 border-neon-blue pb-4' : 'text-gray-500 pb-4'" class="text-sm font-bold uppercase tracking-widest transition-all">Contact Inquiries</button>
+            <button @click="activeTab = 'projects'" :class="activeTab === 'projects' ? 'text-neon-blue border-b-2 border-neon-blue pb-4' : 'text-gray-500 pb-4'" class="text-sm font-bold uppercase tracking-widest transition-all">Projects & Cases</button>
             <button @click="activeTab = 'partners'" :class="activeTab === 'partners' ? 'text-neon-blue border-b-2 border-neon-blue pb-4' : 'text-gray-500 pb-4'" class="text-sm font-bold uppercase tracking-widest transition-all">Manage Partners</button>
             <button @click="activeTab = 'blog'" :class="activeTab === 'blog' ? 'text-neon-blue border-b-2 border-neon-blue pb-4' : 'text-gray-500 pb-4'" class="text-sm font-bold uppercase tracking-widest transition-all">Blog CMS</button>
         </div>
@@ -46,17 +47,66 @@
                 <tbody class="divide-y divide-gray-800">
                     @foreach($contacts as $contact)
                     <tr class="hover:bg-white/5 transition-colors">
-                        <td class="px-6 py-4 text-sm text-gray-500">{{ $contact['date'] }}</td>
-                        <td class="px-6 py-4 text-sm font-bold text-white">{{ $contact['name'] }}<br><span class="text-xs font-normal text-gray-500">{{ $contact['email'] }}</span></td>
-                        <td class="px-6 py-4 text-sm text-gray-300">{{ $contact['subject'] }}</td>
-                        <td class="px-6 py-4 text-sm text-gray-500 truncate max-w-xs">{{ $contact['message'] }}</td>
-                        <td class="px-6 py-4 text-right">
-                            <button class="text-neon-blue hover:text-white transition-colors"><i class="fa-solid fa-eye"></i></button>
+                        <td class="px-6 py-4 text-sm text-gray-500">{{ $contact->created_at->format('M d, Y') }}</td>
+                        <td class="px-6 py-4 text-sm font-bold text-white">{{ $contact->name }}<br><span class="text-xs font-normal text-gray-500">{{ $contact->email }}</span></td>
+                        <td class="px-6 py-4 text-sm text-gray-300">{{ $contact->subject }}</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 truncate max-w-xs">{{ $contact->message }}</td>
+                        <td class="px-6 py-4 text-right flex justify-end gap-3">
+                            <button class="text-neon-blue hover:text-white transition-colors" title="View Message"><i class="fa-solid fa-eye"></i></button>
+                            <form action="/admin/contacts/{{ $contact->id }}/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this inquiry?')">
+                                <button type="submit" class="text-red-500/50 hover:text-red-500 transition-colors" title="Delete Inquiry">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
+        </div>
+
+        <!-- Projects Tab -->
+        <div x-show="activeTab === 'projects'" class="space-y-12">
+            <div>
+                <h3 class="text-xl font-bold mb-6 text-white">Current Projects</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    @foreach(config('projects_data') as $index => $project)
+                    <div class="bg-dark-900 border border-gray-800 p-6 rounded-2xl group hover:border-neon-blue/40 transition-all">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase font-black text-neon-blue bg-neon-blue/10 px-2 py-0.5 rounded-full">{{ $project['status'] }}</span>
+                            <div class="flex gap-3">
+                                <button class="text-gray-500 hover:text-white transition-colors text-sm"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-white mb-2">{{ $project['title'] }}</h4>
+                        <p class="text-xs text-gray-500 mb-4 line-clamp-2">{{ $project['description'] }}</p>
+                        <div class="flex flex-wrap gap-1 mt-auto">
+                            @foreach(array_slice($project['tech_stack'], 0, 3) as $tech)
+                            <span class="text-[8px] uppercase tracking-widest font-bold text-gray-600 bg-white/5 px-1.5 py-0.5 rounded">{{ $tech }}</span>
+                            @endforeach
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-6 text-white">Case Studies</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    @foreach(config('case_studies_data') as $index => $case)
+                    <div class="bg-dark-900 border border-gray-800 p-6 rounded-2xl group hover:border-neon-purple/40 transition-all">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase font-black text-neon-purple bg-neon-purple/10 px-2 py-0.5 rounded-full">Success Story</span>
+                            <div class="flex gap-3">
+                                <button class="text-gray-500 hover:text-white transition-colors text-sm"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-white mb-2">{{ $case['title'] }}</h4>
+                        <p class="text-xs text-gray-500 mb-4 line-clamp-2">{{ $case['challenge'] }}</p>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
 
         <!-- Partners Tab -->

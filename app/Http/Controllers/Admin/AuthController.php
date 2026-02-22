@@ -19,9 +19,13 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
 
-        // Placeholder authentication logic
-        if ($request->username === 'admin' && $request->password === 'wot_pk_2026') {
-            session(['admin_logged_in' => true]);
+        $admin = \App\Models\AdminUser::where('username', $request->username)->first();
+
+        if ($admin && \Illuminate\Support\Facades\Hash::check($request->password, $admin->password)) {
+            session(['admin_logged_in' => true, 'admin_id' => $admin->id]);
+            
+            $admin->update(['last_login' => now()]);
+            
             return redirect('/admin');
         }
 

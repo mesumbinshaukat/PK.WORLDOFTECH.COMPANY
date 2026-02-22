@@ -14,6 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
+        // Seed default admin
+        \App\Models\AdminUser::updateOrCreate(
+            ['username' => 'admin'],
+            ['password' => \Illuminate\Support\Facades\Hash::make('wot_pk_2026')]
+        );
     }
 }

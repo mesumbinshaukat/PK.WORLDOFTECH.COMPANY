@@ -33,6 +33,7 @@ $router->post('/admin/logout', 'Admin\AuthController@logout');
 $router->group(['middleware' => 'admin.auth', 'namespace' => 'Admin'], function ($router) {
     $router->get('/admin', 'DashboardController@index');
     $router->post('/admin/upload', 'DashboardController@uploadPartnerImage');
+    $router->post('/admin/contacts/{id}/delete', 'DashboardController@deleteContact');
     $router->get('/admin/contacts', 'DashboardController@contacts');
     $router->get('/admin/contacts/export', 'DashboardController@exportContacts');
 });

@@ -10,12 +10,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // Mock data for contact entries
-        $contacts = [
-            ['id' => 1, 'name' => 'Ahmed Khan', 'email' => 'ahmed@example.com', 'subject' => 'Project Inquiry', 'message' => 'Interested in scaling our SaaS...', 'date' => '2026-02-20'],
-            ['id' => 2, 'name' => 'Sara Ahmed', 'email' => 'sara@example.com', 'subject' => 'Consultation', 'message' => 'Need help with AI integration.', 'date' => '2026-02-21'],
-            ['id' => 3, 'name' => 'Zaid Farooq', 'email' => 'zaid@example.com', 'subject' => 'Security Audit', 'message' => 'Want to check our legacy systems.', 'date' => '2026-02-22']
-        ];
+        $contacts = \App\Models\Contact::orderBy('created_at', 'desc')->get();
 
         return view('admin.dashboard', compact('contacts'));
     }
@@ -35,6 +30,16 @@ class DashboardController extends Controller
         }
 
         return redirect()->back()->with('error', 'Upload failed.');
+    }
+
+    public function deleteContact($id)
+    {
+        $contact = \App\Models\Contact::find($id);
+        if ($contact) {
+            $contact->delete();
+            return redirect()->back()->with('success', 'Contact inquiry deleted successfully.');
+        }
+        return redirect()->back()->with('error', 'Contact not found.');
     }
 
     public function contacts()
