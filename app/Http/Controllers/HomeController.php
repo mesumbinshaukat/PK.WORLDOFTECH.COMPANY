@@ -36,7 +36,7 @@ class HomeController extends Controller
                 'name' => 'Syed Zohair Adeel',
                 'role' => 'President',
                 'image' => 'Zohair Adeel.webp',
-                'bio' => 'ASP.NET and PHP specialist with extensive experience in e-commerce platforms like nopCommerce.',
+                'bio' => 'ASP.NET and PHP expert specializing in robust ERP systems, stock management modules, HRM, and CRM platforms for enterprise-grade applications.',
                 'social' => [
                     'github' => 'https://github.com/Zohair-git?tab=repositories',
                     'linkedin' => 'https://www.linkedin.com/in/zohair-adeel/'
