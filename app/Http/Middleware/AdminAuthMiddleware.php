@@ -15,7 +15,7 @@ class AdminAuthMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (!session('admin_logged_in')) {
+        if (!app('session')->get('admin_logged_in')) {
             return redirect('/admin/login');
         }
 

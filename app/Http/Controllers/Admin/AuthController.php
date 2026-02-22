@@ -22,20 +22,22 @@ class AuthController extends Controller
         $admin = \App\Models\AdminUser::where('username', $request->username)->first();
 
         if ($admin && \Illuminate\Support\Facades\Hash::check($request->password, $admin->password)) {
-            session(['admin_logged_in' => true, 'admin_id' => $admin->id]);
+            app('session')->put('admin_logged_in', true);
+            app('session')->put('admin_id', $admin->id);
             
             $admin->update(['last_login' => \Illuminate\Support\Carbon::now()]);
             
             return redirect('/admin');
         }
 
-        session()->flash('error', 'Invalid credentials.');
+        app('session')->flash('error', 'Invalid credentials.');
         return redirect($request->header('referer', '/'));
     }
 
     public function logout()
     {
-        session()->forget('admin_logged_in');
+        app('session')->forget('admin_logged_in');
+        app('session')->forget('admin_id');
         return redirect('/admin/login');
     }
 }

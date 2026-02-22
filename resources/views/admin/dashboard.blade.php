@@ -81,7 +81,7 @@
                         <h4 class="font-bold text-white mb-2">{{ $project['title'] }}</h4>
                         <p class="text-xs text-gray-500 mb-4 line-clamp-2">{{ $project['description'] }}</p>
                         <div class="flex flex-wrap gap-1 mt-auto">
-                            @foreach(array_slice($project['tech_stack'], 0, 3) as $tech)
+                            @foreach(array_slice($project['tech'] ?? [], 0, 3) as $tech)
                             <span class="text-[8px] uppercase tracking-widest font-bold text-gray-600 bg-white/5 px-1.5 py-0.5 rounded">{{ $tech }}</span>
                             @endforeach
                         </div>
