@@ -65,7 +65,7 @@ class HomeController extends Controller
             [
                 'name' => 'Abdul Rafay Khan',
                 'role' => 'CMO & Director',
-                'image' => 'Abdul Rafay Khan.webp',
+                'image' => 'AbdulRafayKhan.webp',
                 'bio' => 'Versatile full-stack developer dedicated to building efficient web and mobile applications.',
                 'social' => [
                     'github' => 'https://github.com/abdulrafayKhan-10?tab=repositories',

@@ -54,7 +54,7 @@ class AboutController extends Controller
             [
                 'name' => 'Abdul Rafay Khan',
                 'role' => 'CMO & Director',
-                'image' => 'Abdul Rafay Khan.webp',
+                'image' => 'AbdulRafayKhan.webp',
                 'bio' => 'Abdul Rafay Khan is an aspiring software engineer with a focus on full-stack development. He blends traditional engineering principles with contemporary tech stacks to build resilient applications. His contributions at World of Tech span both frontend and backend development across various client projects.',
                 'expertise' => ['Web Development', 'Software Architecture', 'Full-Stack'],
                 'social' => [
