@@ -5,3 +5,4 @@ Homestead.yaml
 .env
 .env.prod
 .phpunit.result.cache
+/storage
