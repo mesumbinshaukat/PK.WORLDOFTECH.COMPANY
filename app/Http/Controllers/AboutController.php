@@ -10,7 +10,7 @@ class AboutController extends Controller
             [
                 'name' => 'Mesum Bin Shaukat',
                 'role' => 'Founder & CEO',
-                'image' => 'Mesum Bin Shaukat.webp',
+                'image' => 'MesumBinShaukat.webp',
                 'bio' => 'Mesum Bin Shaukat is the visionary behind World of Tech PVT LTD. With a strong background in full-stack software engineering and a passion for building multi-SaaS startups, he has led the company to become a significant player in Pakistan\'s IT ecosystem. He specializes in creating business leverage through innovative tech solutions and is actively involved in the local startup and crowdfunding landscape.',
                 'expertise' => ['Full-Stack Engineering', 'SaaS Strategy', 'Startup Leadership'],
                 'social' => [
@@ -21,7 +21,7 @@ class AboutController extends Controller
             [
                 'name' => 'Syed Zohair Adeel',
                 'role' => 'President',
-                'image' => 'Zohair Adeel.webp',
+                'image' => 'ZohairAdeel.webp',
                 'bio' => 'Syed Zohair Adeel brings deep expertise in backend systems, e-commerce development, and enterprise resource planning. Having worked with platforms like nopCommerce, he specializes in building robust web solutions, ERP systems, stock management modules, HRM, and CRM platforms using ASP.NET and PHP. Based in Karachi, Zohair is dedicated to delivering high-performance, enterprise-grade applications.',
                 'expertise' => ['ERP & CRM', 'Stock Management', 'HRM Platforms', 'ASP.NET'],
                 'social' => [
@@ -32,7 +32,7 @@ class AboutController extends Controller
             [
                 'name' => 'Huzaifa Irfan',
                 'role' => 'COO & CFO',
-                'image' => 'Huzaifa Irfan.webp',
+                'image' => 'HuzaifaIrfan.webp',
                 'bio' => 'Muhammad Huzaifa Irfan is the creative force at World of Tech. As a senior graphic and UI/UX designer, he bridges the gap between complex functionality and beautiful visuals. His portfolio spans logos, mobile app designs, and interactive web interfaces, ensuring every project is as aesthetically pleasing as it is functional.',
                 'expertise' => ['UI/UX Design', 'Brand Identity', 'Adobe Suite'],
                 'social' => [
@@ -43,7 +43,7 @@ class AboutController extends Controller
             [
                 'name' => 'Muhammad Sarim Saleem',
                 'role' => 'Senior Vice President (SVP)',
-                'image' => 'Sarim Saleem.webp',
+                'image' => 'SarimSaleem.webp',
                 'bio' => 'Muhammad Sarim Saleem is a dedicated AI researcher and software engineer. Focused on artificial intelligence and machine learning, he explores the boundaries of what\'s possible in automated systems. His affiliation with Heavy Industries Taxila and his rigorous CS background make him an invaluable asset for AI-driven projects.',
                 'expertise' => ['Artificial Intelligence', 'Machine Learning', 'Data Science'],
                 'social' => [

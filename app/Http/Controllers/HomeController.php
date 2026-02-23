@@ -25,7 +25,7 @@ class HomeController extends Controller
             [
                 'name' => 'Mesum Bin Shaukat',
                 'role' => 'Founder & CEO',
-                'image' => 'Mesum Bin Shaukat.webp',
+                'image' => 'MesumBinShaukat.webp',
                 'bio' => 'Full-stack software engineer and startup founder focused on building scalable SaaS products and leveraging tech for business growth.',
                 'social' => [
                     'github' => 'https://github.com/mesumbinshaukat?tab=repositories',
@@ -35,7 +35,7 @@ class HomeController extends Controller
             [
                 'name' => 'Syed Zohair Adeel',
                 'role' => 'President',
-                'image' => 'Zohair Adeel.webp',
+                'image' => 'ZohairAdeel.webp',
                 'bio' => 'ASP.NET and PHP expert specializing in robust ERP systems, stock management modules, HRM, and CRM platforms for enterprise-grade applications.',
                 'social' => [
                     'github' => 'https://github.com/Zohair-git?tab=repositories',
@@ -45,7 +45,7 @@ class HomeController extends Controller
             [
                 'name' => 'Huzaifa Irfan',
                 'role' => 'COO & CFO',
-                'image' => 'Huzaifa Irfan.webp',
+                'image' => 'HuzaifaIrfan.webp',
                 'bio' => 'Creative designer specializing in modern interfaces, brand identity, and intuitive user experiences.',
                 'social' => [
                     'github' => 'https://github.com/Huzaifa1509?tab=repositories',
@@ -55,7 +55,7 @@ class HomeController extends Controller
             [
                 'name' => 'Sarim Saleem',
                 'role' => 'Senior Vice President (SVP)',
-                'image' => 'Sarim Saleem.webp',
+                'image' => 'SarimSaleem.webp',
                 'bio' => 'Computer Science expert focusing on artificial intelligence, machine learning algorithms, and data science.',
                 'social' => [
                     'github' => 'https://github.com/sarimkhan515?tab=repositories',
