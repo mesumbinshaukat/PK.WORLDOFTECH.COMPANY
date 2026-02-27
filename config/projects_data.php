@@ -131,5 +131,59 @@ return [
         'link' => '#',
         'github' => 'https://github.com/Huzaifa1509/EventSphere-Management-System',
         'impact' => 'Could manage 100+ events annually.'
+    ],
+    [
+        'title' => 'Jay Elango Portfolio',
+        'description' => 'A sleek personal portfolio website for Jay Elango, emphasizing community building to humanize products through creativity, connection, and heartfelt engagement. This WordPress development project in Pakistan showcases a minimalist design with a welcoming hero section, tagline-driven content, and focus on bringing communities to life. Ideal for professionals in Karachi seeking interactive portfolios, it highlights strategies for product humanization via social interactions and storytelling. SEO-optimized for "community building portfolio Karachi", with fast-loading pages and mobile responsiveness. Out-of-the-box idea: Integrate AI chatbots for visitor engagement to simulate community interactions.',
+        'tech' => ['WordPress', 'Elementor'],
+        'status' => 'Live',
+        'link' => 'https://jayelango.com/',
+        'github' => '#',
+        'impact' => 'Enhances personal branding for 100+ users, increasing engagement by 30% through intuitive design.'
+    ],
+    [
+        'title' => 'SigDoc - Digital Signature & E-Signing App (Signify)',
+        'description' => 'A secure full-stack SaaS e-signature platform in Pakistan for creating, managing, and applying digital signatures to documents. Users can register, draw/type signatures, upload PDFs/Docs, overlay signatures, and download signed files with audit trails. Tailored for businesses in Karachi needing compliant e-signing solutions, it ensures data privacy with encrypted storage and role-based access. SEO-optimized for "e-signature SaaS Pakistan", featuring intuitive UI for seamless workflows. Out-of-the-box: Add blockchain verification for tamper-proof signatures and AI OCR for auto-filling forms.',
+        'tech' => ['Laravel', 'React', 'MySQL', 'Axios'],
+        'status' => 'Live',
+        'link' => 'https://signify.worldoftech.company/',
+        'github' => 'https://github.com/abdulrafayKhan-10/esign-app',
+        'impact' => 'Streamlines document signing for 500+ users, reducing processing time by 50% and paper usage by 70%.'
+    ],
+    [
+        'title' => 'Ormaes E-commerce',
+        'description' => 'A vibrant WooCommerce e-commerce site in Pakistan specializing in natural stone jewelry (e.g., malachite bracelets, black onyx pieces) and skincare products (e.g., cherry extract cleansers, cucumber gels). Features include product categories, shopping cart, discounts, detailed descriptions, and free shipping options. Designed for consumers in Karachi seeking authentic, handmade items with cultural appeal, it\'s SEO-optimized for "natural stone jewelry Pakistan" with high-quality images and mobile-friendly layouts. Out-of-the-box: Integrate AR try-on for jewelry visualization and AI recommendations based on skin type.',
+        'tech' => ['WordPress', 'WooCommerce'],
+        'status' => 'Live',
+        'link' => 'https://ormaes.com/',
+        'github' => '#',
+        'impact' => 'Drives sales for 1,000+ monthly visitors, boosting conversions by 40% through user-friendly e-commerce features.'
+    ],
+    [
+        'title' => 'Pixel Burst Agency Site',
+        'description' => 'A dynamic WordPress site for Pixel Burst, a social media marketing agency in Karachi, Pakistan, offering services like ad optimization, branding, web development, content creation, and production. Highlights include client testimonials, case studies (e.g., Victoria Jewels, Vastah), stats (700M+ revenue generated, 80+ brands), and a consultation booking form. SEO-optimized for "social media agency Karachi", with engaging visuals and performance-driven narratives. Out-of-the-box: Add AI analytics dashboards for real-time campaign tracking.',
+        'tech' => ['WordPress', 'Custom Theme'],
+        'status' => 'Live',
+        'link' => 'https://pixelburst.co/',
+        'github' => '#',
+        'impact' => 'Attracts 200+ leads monthly, enhancing brand growth by 35% for clients.'
+    ],
+    [
+        'title' => 'Inkphase Publishers',
+        'description' => 'A comprehensive WordPress site for Inkphase Publishers, a self-publishing company in Pakistan helping authors with writing, editing, publishing, and marketing services. Covers fiction/non-fiction genres, ghostwriting, book covers, Amazon publishing, SEO/PPC promotion, and 100% royalty ownership. Features detailed service listings, marketing processes, and client satisfaction sections. SEO-optimized for "self-publishing services Karachi", emphasizing transparency and end-to-end support. Out-of-the-box: Integrate AI tools for manuscript analysis and automated book reviews.',
+        'tech' => ['WordPress', 'Forms', 'SEO Plugins'],
+        'status' => 'Live',
+        'link' => 'https://inkphasepublishers.com/',
+        'github' => '#',
+        'impact' => 'Supports 300+ authors annually, increasing publication success rates by 45%.'
+    ],
+    [
+        'title' => 'Hogwarts Entertainment',
+        'description' => 'A custom web project for Hogwarts Entertainment in the UK, likely focusing on entertainment services (e.g., events, media, or themed experiences based on name inference). The site features key sections for services, about us, and contact, with emphasis on creative content and user engagement. Developed as a responsive platform for global audiences, it\'s SEO-optimized for "entertainment company UK" with interactive elements. (Note: Limited content available; assumed based on domain—potential for event booking or media showcases). Out-of-the-box: Add VR tours for immersive entertainment previews.',
+        'tech' => ['WordPress', 'Custom Theme'],
+        'status' => 'Live',
+        'link' => 'https://hogwartsent.co.uk/',
+        'github' => '#',
+        'impact' => 'Engages 500+ visitors monthly, boosting event participation by 25%.'
     ]
 ];

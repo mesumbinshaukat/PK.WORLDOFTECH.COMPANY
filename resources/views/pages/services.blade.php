@@ -21,7 +21,9 @@
                     </div>
                 </div>
                 
-                <h2 class="text-2xl font-bold mb-4 text-white">{{ $service['title'] }}</h2>
+                <a href="/services/{{ $service['slug'] }}" class="group/title block">
+                    <h2 class="text-2xl font-bold mb-4 text-white group-hover/title:text-neon-blue transition-colors">{{ $service['title'] }}</h2>
+                </a>
                 <p class="text-gray-400 mb-8 leading-relaxed">
                     {{ $service['description'] }}
                 </p>

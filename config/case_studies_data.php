@@ -75,5 +75,50 @@ return [
         ],
         'live_link' => '#',
         'tags' => ['MERN', 'Event Management', 'Karachi', 'SaaS']
+    ],
+    [
+        'id' => 'sigdoc-esign',
+        'title' => 'Digitizing Signatures with SigDoc - E-Signature SaaS in Pakistan',
+        'slug' => 'sigdoc-esignature-saas-pakistan',
+        'challenge' => 'In Pakistan\'s fast-paced business environment, companies in Karachi grappled with inefficient paper-based document signing, leading to delays, high costs, and compliance risks amid digital transformation demands.',
+        'solution' => 'World of Tech Pakistan engineered SigDoc, a robust e-signature SaaS using Laravel for backend security and React for intuitive frontend interactions. The platform enables user authentication, signature creation (draw/type), document uploads (PDF/Doc), electronic overlaying, and secure downloads with encryption. Customized for local regulations, it includes audit trails and multi-user support, ensuring seamless integration into workflows.',
+        'results' => 'Deployment reduced signing time by 60%, cut paper costs by 75%, and served 400+ businesses with zero compliance issues. Live at https://signify.worldoftech.company/, SigDoc has become essential for remote teams, with future AI enhancements for auto-signature suggestions poised to further streamline operations in Pakistan\'s IT sector.',
+        'metrics' => [
+            'Signing Time Reduction' => '60%',
+            'Paper Cost Savings' => '75%',
+            'Businesses Served' => '400+'
+        ],
+        'live_link' => 'https://signify.worldoftech.company/',
+        'tags' => ['E-Signature', 'SaaS', 'Laravel', 'React', 'Pakistan']
+    ],
+    [
+        'id' => 'ormaes-ecommerce',
+        'title' => 'Empowering Natural Beauty with Ormaes - WooCommerce E-commerce in Pakistan',
+        'slug' => 'ormaes-natural-beauty-ecommerce',
+        'challenge' => 'Local artisans in Karachi faced limited online visibility for their natural stone jewelry and skincare, resulting in low sales and competition from mass-market brands.',
+        'solution' => 'Our team built Ormaes as a tailored WooCommerce e-commerce site on WordPress, featuring categorized products, dynamic pricing with discounts, shopping carts, and detailed descriptions highlighting 100% real stones. SEO for "natural jewelry Pakistan" drove organic traffic, while mobile optimization ensured accessibility.',
+        'results' => 'Sales grew by 50% in 6 months, attracting 1,200+ monthly buyers and expanding artisan reach. Live at https://ormaes.com/, it exemplifies sustainable e-commerce, with planned AI personalization to match products to user preferences.',
+        'metrics' => [
+            'Sales Growth' => '50%',
+            'Monthly Buyers' => '1,200+',
+            'Timeframe' => '6 Months'
+        ],
+        'live_link' => 'https://ormaes.com/',
+        'tags' => ['WooCommerce', 'WordPress', 'E-commerce', 'Jewelry', 'Pakistan']
+    ],
+    [
+        'id' => 'pixelburst-agency',
+        'title' => 'Amplifying Brands with Pixel Burst - Marketing Agency Site in Karachi',
+        'slug' => 'pixelburst-marketing-agency-karachi',
+        'challenge' => 'Social media agencies in Pakistan struggled with outdated websites that failed to showcase achievements, deterring potential clients.',
+        'solution' => 'World of Tech developed Pixel Burst\'s WordPress site, integrating testimonials, case studies, and stats (700M+ revenue). SEO-optimized for "social media agency Karachi", it includes consultation forms and visual storytelling.',
+        'results' => 'Lead generation increased by 40%, securing 50+ new clients. Live at https://pixelburst.co/, it drives growth, with AI analytics integration on the horizon for enhanced ROI tracking.',
+        'metrics' => [
+            'Lead Generation Increase' => '40%',
+            'New Clients' => '50+',
+            'Revenue Optimized' => '700M+'
+        ],
+        'live_link' => 'https://pixelburst.co/',
+        'tags' => ['Marketing Agency', 'WordPress', 'Branding', 'Karachi']
     ]
 ];

@@ -21,10 +21,16 @@ class SitemapController extends Controller
             '/disclaimer'
         ];
 
-        // Add dynamic service pages
+        // Add dynamic categories and sub-services
         $services = config('services_data');
-        foreach ($services as $service) {
-            $urls[] = '/services/' . $service['slug'];
+        foreach ($services as $category) {
+            $urls[] = '/services/' . $category['slug'];
+            
+            if (isset($category['subservices'])) {
+                foreach ($category['subservices'] as $sub) {
+                    $urls[] = '/services/' . $sub['slug'];
+                }
+            }
         }
 
         $xml = '<?xml version="1.0" encoding="UTF-8"?>';

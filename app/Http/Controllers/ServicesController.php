@@ -509,13 +509,22 @@ class ServicesController extends Controller
 
     public function show($slug)
     {
-        $subServices = $this->getDetailedSubServices();
+        $allServices = $this->getServicesData();
+        $detailedSubServices = $this->getDetailedSubServices();
 
-        if (!isset($subServices[$slug])) {
-            abort(404);
+        // Check if it's a main category
+        $category = collect($allServices)->firstWhere('slug', $slug);
+        
+        if ($category) {
+            return view('pages.service-category', compact('category'));
         }
 
-        $service = $subServices[$slug];
-        return view('pages.service-detail', compact('service'));
+        // Check if it's a detailed sub-service
+        if (isset($detailedSubServices[$slug])) {
+            $service = $detailedSubServices[$slug];
+            return view('pages.service-detail', compact('service'));
+        }
+
+        abort(404);
     }
 }
