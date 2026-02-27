@@ -44,6 +44,7 @@
 
                 <div class="mt-auto pt-8 border-t border-white/5">
                     <a href="/services/{{ $subservice['slug'] }}" class="inline-flex items-center gap-2 text-neon-blue text-xs font-black uppercase tracking-widest hover:text-blue-400 transition-colors">
+                        <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                         Explore Service <i class="fa-solid fa-arrow-right-long"></i>
                     </a>
                 </div>
